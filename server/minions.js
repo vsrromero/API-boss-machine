@@ -21,7 +21,8 @@ minionsRouter.param('minionId', (req, res, next, id) => {
 });
 
 minionsRouter.get('/', (req, res, next) => {
-    res.send(getAllFromDatabase('minions'));
+    const allMinions = getAllFromDatabase('minions')
+    res.send(allMinions);
     });
 
 minionsRouter.post('/', (req, res, next) => {
